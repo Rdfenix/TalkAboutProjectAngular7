@@ -13,7 +13,7 @@ nav>ul>a {
   color: #FFF;
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
-  padding: 15px;
+  padding: 10px;
 }
 
 nav>ul>a>li::first-letter {
