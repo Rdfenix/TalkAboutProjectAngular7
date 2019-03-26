@@ -6,13 +6,15 @@ import { AppRouterModule } from './app-router.module';
 import { HeaderComponent } from './header/header.component';
 import { BottomComponent } from './bottom/bottom.component';
 import { NavComponent } from './header/nav/nav.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     BottomComponent,
-    NavComponent
+    NavComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
