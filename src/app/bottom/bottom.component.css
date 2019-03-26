@@ -1,3 +1,18 @@
-footer{
-    margin-top: auto;
+footer {
+  background: #f3f3f3;
+  padding: 15px;
+  font-family: 'Roboto', sans-serif;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer>span {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    padding: 0 15px 0 0;
+    font-size: 14px;
 }
