@@ -1,0 +1,23 @@
+header {
+  height: auto;
+  background-color: black;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+header>a {
+  text-decoration: none;
+  color: #FFF;
+  flex: 1;
+}
+
+header>a>h1 {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 2em;
+}
+
+header>a>h1::first-letter {
+  text-transform: uppercase;
+}
