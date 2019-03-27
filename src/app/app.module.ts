@@ -8,6 +8,9 @@ import { BottomComponent } from './bottom/bottom.component';
 import { NavComponent } from './header/nav/nav.component';
 import { CardComponent } from './card/card.component';
 import { HomeComponent } from './home/home.component';
+import { CommentaryComponent } from './commentary/commentary.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { HomeComponent } from './home/home.component';
     BottomComponent,
     NavComponent,
     CardComponent,
-    HomeComponent
+    HomeComponent,
+    CommentaryComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
