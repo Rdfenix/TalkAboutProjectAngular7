@@ -20,3 +20,7 @@ section {
   padding: 20px;
   height: 90%;
 }
+
+div.field {
+  padding: 10px;
+}

@@ -14,6 +14,7 @@ div.container-form-login>div.login {
   border-radius: 5px;
   width: 50%;
   height: auto;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.6);
 }
 
 div.login>h1 {
@@ -27,10 +28,6 @@ div.login>h1::first-letter {
   text-transform: uppercase;
 }
 
-div.login>form>div.field {
-  padding: 10px;
-}
-
 div.login>form>div.field>input {
   width: 100%;
   padding: 10px;
@@ -41,9 +38,9 @@ div.login>form>div.field>input {
   border-radius: 3px;
 }
 
-div.login>form>div.field>input:focus{
-    border-color: #9cccef;
-    border-width: 15px;
+div.login>form>div.field>input:focus {
+  border-color: #9cccef;
+  border-width: 15px;
 }
 
 div.login>form>div.field>input::-webkit-input-placeholder {
