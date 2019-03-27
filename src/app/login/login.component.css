@@ -9,9 +9,11 @@ div.container-form-login {
 }
 
 div.container-form-login>div.login {
-  background-color: #000;
-  padding: 30px 60px 30px 60px;
+  background-color: #1f1f1f;
+  padding: 25px 40px 33px 40px;
   border-radius: 5px;
+  width: 50%;
+  height: auto;
 }
 
 div.login>h1 {
@@ -31,6 +33,22 @@ div.login>form>div.field {
   flex-direction: row;
 }
 
+div.login>form>div.field>input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
 div.field>button {
-  align-items: flex-end;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  background-color: #9cccef;
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
 }
