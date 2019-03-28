@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../service/data.service';
+import { Card } from '../model/card';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
+
 export class CardComponent implements OnInit {
 
-  cards: object;
-  showCards: boolean = false;
+  cards: Card[] = []
 
   constructor(private data: DataService) { }
 
@@ -19,7 +20,10 @@ export class CardComponent implements OnInit {
 
   getPosts = () => {
     this.data.getPosts().subscribe(data => {
-      console.log(this.isEmpty(data))
+      if (!this.isEmpty(data)) {
+        //let cards = Object.keys(data).map(i => data[i])
+        
+      }
     })
   }
 

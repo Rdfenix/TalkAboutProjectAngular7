@@ -4,7 +4,7 @@ name, last name, email, password, token
 
 post:
 
-userID, post
+userID, post, title
 
 commentary:
 
