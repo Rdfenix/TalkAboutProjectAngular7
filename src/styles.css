@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 html,
@@ -21,8 +22,18 @@ section {
   height: 90%;
 }
 
-div.field {
+.field {
   padding: 10px;
+}
+
+.field>button {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 3px;
 }
 
 .container-form {

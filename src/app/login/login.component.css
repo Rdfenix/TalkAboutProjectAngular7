@@ -10,7 +10,6 @@ div.container-form>div.login {
 div.login>h1 {
   color: #FFF;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
   margin-bottom: 5px;
 }
 
@@ -22,7 +21,6 @@ div.login>form>div.field>input {
   width: 100%;
   padding: 10px;
   border: none;
-  font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 18px;
   border-radius: 3px;
@@ -39,13 +37,6 @@ div.login>form>div.field>input::-webkit-input-placeholder {
 }
 
 div.field>button {
-  width: 100%;
-  padding: 8px;
-  border: none;
-  font-family: 'Roboto', sans-serif;
   background-color: #9cccef;
   color: #000;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 3px;
 }

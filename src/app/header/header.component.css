@@ -20,7 +20,6 @@ header>div.container>a {
 }
 
 header>div.container>a>h1 {
-  font-family: 'Roboto', sans-serif;
   font-style: italic;
   font-size: 2em;
 }
