@@ -10,7 +10,7 @@ export class DataService {
 
   getUsers = () => this.http.get('http://localhost:3000/users')
   getOneUser = (userId: number) => this.http.get(`http://localhost:3000/users/${userId}`)
-  getUserLogin = (email: string) => this.http.get(`http://localhost:3000/users?email=${email}`)
+  getUserLogin = (email: string, password: string) => this.http.get(`http://localhost:3000/users?email=${email}&password=${password}`)
   postUser = (data: object) => this.http.post('http://localhost:3000/users', data)
 
   getComments = () => this.http.get('http://localhost:3000/comments')

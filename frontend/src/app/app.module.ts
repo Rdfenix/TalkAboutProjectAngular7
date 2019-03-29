@@ -34,7 +34,11 @@ import { RegisterComponent } from './register/register.component';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot({
+      timeOut: 3100,
+      positionClass: 'toast-top-center',
+      preventDuplicates: true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
