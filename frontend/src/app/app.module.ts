@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'
-import {FormsModule} from '@angular/forms'
+import { FormsModule } from '@angular/forms'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { ToastrModule } from 'ngx-toastr'
 
 import { AppComponent } from './app.component';
 import { AppRouterModule } from './app-router.module';
@@ -30,7 +32,9 @@ import { RegisterComponent } from './register/register.component';
     BrowserModule,
     AppRouterModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

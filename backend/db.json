@@ -6,6 +6,27 @@
       "email": "rudnei.oliveira@gmail.com",
       "password": "123456",
       "id": 1
+    },
+    {
+      "name": "Marcos",
+      "lastName": "Oliveira",
+      "email": "marcos.oliveira@email.com",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "name": "Celso",
+      "lastName": "Oliveira",
+      "email": "celso.oliveira@email.com",
+      "password": "123456",
+      "id": 3
+    },
+    {
+      "name": "Sueli",
+      "lastName": "Barbosa",
+      "email": "sueli.barbosa@email.com",
+      "password": "123456",
+      "id": 4
     }
   ],
   "comments": [],
