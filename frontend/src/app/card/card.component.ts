@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../service/data.service';
 import { Card } from '../model/card';
+import { User } from '../model/user';
 
 @Component({
   selector: 'app-card',
@@ -10,19 +11,22 @@ import { Card } from '../model/card';
 
 export class CardComponent implements OnInit {
 
-  cards: Card[] = []
-
   constructor(private data: DataService) { }
+
+  cards: object[] = [];
 
   ngOnInit() {
     this.getPosts()
   }
 
   getPosts = () => {
-    this.data.getPosts().subscribe(data => {
-      if (!this.isEmpty(data)) {
-        //let cards = Object.keys(data).map(i => data[i])
-        
+    this.data.getPosts().subscribe((dataCard: Card[]) => {
+      if (dataCard.length > 0) {
+        dataCard.map(item => {
+          this.data.getOneUser(item.userID).subscribe((dataUser: User) => {
+            this.cards.push({ ...item, userName: dataUser.name })
+          })
+        })
       }
     })
   }
@@ -34,5 +38,7 @@ export class CardComponent implements OnInit {
     }
     return true;
   }
+
+  transformToArray = (item: object) => Object.keys(item).map(i => item[i])
 
 }
