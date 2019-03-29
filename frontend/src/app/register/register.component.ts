@@ -36,7 +36,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit = (form: NgForm) => {
-    console.log({ ...form.value })
+    let data = { ...form.value }
   }
 
 }
