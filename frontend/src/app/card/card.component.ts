@@ -31,14 +31,4 @@ export class CardComponent implements OnInit {
     })
   }
 
-  isEmpty = (data: object) => {
-    for (let key in data) {
-      if (data.hasOwnProperty(key))
-        return false;
-    }
-    return true;
-  }
-
-  transformToArray = (item: object) => Object.keys(item).map(i => item[i])
-
 }
