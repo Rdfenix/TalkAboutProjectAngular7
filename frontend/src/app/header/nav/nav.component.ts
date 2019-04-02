@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { AuthServiceService } from 'src/app/service/auth-service.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  showNav: Observable<boolean>;
+
+  constructor(private authService: AuthServiceService) { }
 
   ngOnInit() {
+    this.verifyLogin();
   }
 
+  verifyLogin = () => {
+    this.showNav = this.authService.isLoggedIn;
+    console.log('teste', this.showNav)
+  }
+
+  logout = () => this.authService.logout();
 }
