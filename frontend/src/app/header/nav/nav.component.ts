@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  _isLogged: Observable<boolean>;
+
+  constructor(private _auth: AuthService) { }
 
   ngOnInit() {
+    this.validateNav
+  }
+
+  validateNav(){
+    this._isLogged = this._auth.isLoggedIn;
+    console.log(this._isLogged)
   }
 
 }
