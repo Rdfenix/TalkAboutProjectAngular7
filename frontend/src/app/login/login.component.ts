@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'
-import { ToastrService } from 'ngx-toastr'
-import { DataService } from '../service/data.service';
 import { NgForm } from '@angular/forms'
 import { User } from '../model/user';
+import { LoginLogoutService } from '../service/login-logout.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +15,7 @@ export class LoginComponent implements OnInit {
     password: ''
   }
 
-  constructor(private data: DataService, private router: Router, private toastr: ToastrService) { }
+  constructor(private _loginService: LoginLogoutService) { }
 
   ngOnInit() {
     this.formData;
@@ -26,14 +24,8 @@ export class LoginComponent implements OnInit {
   onSubmit = (form: NgForm) => {
     let data = { ...form.value }
     const { email, password } = data
-    this.data.getUserLogin(email, password).subscribe((resp: User) => {
-      if (resp == '') {
-        this.toastr.warning("User not found or dont exits")
-      } else {
-        sessionStorage.setItem('user', resp[0].email)
-        this.router.navigateByUrl('/')
-      }
-    })
+    this._loginService.login(email, password)
+
   }
 
 }

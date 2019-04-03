@@ -15,6 +15,8 @@ import { HomeComponent } from './home/home.component';
 import { CommentaryComponent } from './commentary/commentary.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AuthGuard } from './service/auth.guard';
+import { AuthService } from './service/auth.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,7 @@ import { RegisterComponent } from './register/register.component';
       preventDuplicates: true
     })
   ],
-  providers: [],
+  providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

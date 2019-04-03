@@ -1,15 +1,15 @@
 <nav>
   <ul>
-    <a href="/login">
+    <a href="/login" [hidden]="userLogged">
       <li>login</li>
     </a>
-    <a href="/register">
+    <a href="/register" [hidden]="userLogged">
       <li>register</li>
     </a>
-    <a href="#/">
+    <a href="#/" [hidden]="!userLogged">
       <li>create post</li>
     </a>
-    <a href="#/">
+    <a href="#" (click)="logout()" [hidden]="!userLogged">
       <li>logout</li>
     </a>
   </ul>
