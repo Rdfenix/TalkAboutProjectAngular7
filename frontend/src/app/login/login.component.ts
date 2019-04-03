@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
       if (resp == '') {
         this.toastr.warning("User not found or dont exits")
       } else {
+        sessionStorage.setItem('user', resp[0].email)
         this.router.navigateByUrl('/')
       }
     })
