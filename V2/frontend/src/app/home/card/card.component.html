@@ -1,15 +1,17 @@
 <section>
   <div class="cards">
     <div class="card" *ngFor="let card of cards">
-      <div class="card-header">
-        <h4>{{card?.title}}</h4>
-      </div>
-      <div class="container">
-        <p>{{card?.post}}</p>
-      </div>
-      <div class="card-footer">
-        <p>- {{card?.userName}}</p>
-      </div>
+      <a href="#/">
+        <div class="card-header">
+          <h4>{{card?.title}}</h4>
+        </div>
+        <div class="container">
+          <p>{{card?.post}}</p>
+        </div>
+        <div class="card-footer">
+          <p>- {{card?.userName}}</p>
+        </div>
+      </a>
     </div>
   </div>
 </section>

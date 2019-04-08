@@ -17,13 +17,20 @@ div.card {
   margin: 15px;
 }
 
-div.card-header {
+div.card>a {
+  text-decoration: none;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+}
+
+div.card>a>div.card-header {
   background: #000;
   padding: 10px;
 }
 
-div.card-header>h4 {
+div.card>a>div.card-header>h4 {
   color: #FFF;
+  font-weight: bold;
 }
 
 div.card:hover {
@@ -37,7 +44,7 @@ div.container {
   margin-bottom: 10px;
 }
 
-div.card>div.container>p {
+div.card>a>div.container>p {
   white-space: normal;
   overflow: hidden;
   max-height: 60px;
