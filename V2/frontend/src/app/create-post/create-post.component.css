@@ -1,0 +1,38 @@
+section>header {
+  align-self: center;
+}
+
+section>div.container-form {
+  margin-bottom: 5px;
+}
+
+section>div.container-form>form {
+  width: 50%;
+}
+
+section>header>h1 {
+  font-size: 28px;
+  margin-bottom: 0;
+}
+
+section>header>h1::first-letter {
+  text-transform: uppercase;
+}
+
+div.field>input,
+div.field>textarea {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 3px;
+  width: 100%;
+}
+
+div.container-form>form {
+  background-color: #1f1f1f;
+  padding: 25px 40px 33px 40px;
+  border-radius: 5px;
+  width: 40%;
+  height: auto;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.6);
+}
