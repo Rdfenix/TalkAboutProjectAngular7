@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { BottomComponent } from './bottom/bottom.component';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
+import { CreatePostComponent } from './create-post/create-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BottomComponent,
     HeaderComponent,
-    MainComponent
+    MainComponent,
+    CreatePostComponent
   ],
   imports: [
     BrowserModule,
