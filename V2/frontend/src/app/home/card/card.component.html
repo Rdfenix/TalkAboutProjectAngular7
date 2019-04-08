@@ -1,13 +1,15 @@
-<div class="cards">
-  <div class="card">
-    <div class="card-header">
-      <h4>title</h4>
-    </div>
-    <div class="container">
-      <p>post</p>
-    </div>
-    <div class="card-footer">
-      <p>- username</p>
+<section>
+  <div class="cards">
+    <div class="card" *ngFor="let card of cards">
+      <div class="card-header">
+        <h4>{{card?.title}}</h4>
+      </div>
+      <div class="container">
+        <p>{{card?.post}}</p>
+      </div>
+      <div class="card-footer">
+        <p>- {{card?.userName}}</p>
+      </div>
     </div>
   </div>
-</div>
+</section>
