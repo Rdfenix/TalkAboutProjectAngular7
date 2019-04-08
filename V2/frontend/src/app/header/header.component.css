@@ -1,0 +1,45 @@
+header {
+  height: auto;
+  background-color: #1f1f1f;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+div.container {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+header>div.container>a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+header>div.container>a>h1 {
+  font-style: italic;
+  font-size: 2em;
+}
+
+header>div.container>a>h1::first-letter {
+  text-transform: uppercase;
+}
+
+nav>ul {
+  list-style: none;
+  display: flex;
+}
+
+nav>ul>a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 20px;
+  padding: 10px;
+}
+
+nav>ul>a>li::first-letter {
+  text-transform: uppercase;
+}

@@ -1,0 +1,16 @@
+<nav>
+  <ul>
+    <a routerLink="/login" [hidden]="userLogged">
+      <li>login</li>
+    </a>
+    <a routerLink="/register" [hidden]="userLogged">
+      <li>register</li>
+    </a>
+    <a routerLink="#/" [hidden]="!userLogged">
+      <li>create post</li>
+    </a>
+    <a routerLink="#" (click)="logout()" [hidden]="!userLogged">
+      <li>logout</li>
+    </a>
+  </ul>
+</nav>
