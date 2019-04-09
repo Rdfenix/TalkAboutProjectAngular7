@@ -5,9 +5,10 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { CardComponent } from './card/card.component';
 import { PostComponent } from './post/post.component';
+import { CommentComponent } from './post/comment/comment.component';
 
 @NgModule({
-  declarations: [HomeComponent, CardComponent, PostComponent],
+  declarations: [HomeComponent, CardComponent, PostComponent, CommentComponent],
   imports: [
     CommonModule,
     HomeRoutingModule
