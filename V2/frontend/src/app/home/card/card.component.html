@@ -1,17 +1,15 @@
-<section>
-  <div class="cards">
-    <div class="card" *ngFor="let card of cards">
-      <a href="#/">
-        <div class="card-header">
-          <h4>{{card?.title}}</h4>
-        </div>
-        <div class="container">
-          <p>{{card?.post}}</p>
-        </div>
-        <div class="card-footer">
-          <p>- {{card?.userName}}</p>
-        </div>
-      </a>
-    </div>
+<div class="cards">
+  <div class="card" *ngFor="let card of cards">
+    <a [routerLink]="['post', card.id]">
+      <div class="card-header">
+        <h4>{{card?.title}}</h4>
+      </div>
+      <div class="container">
+        <p>{{card?.post}}</p>
+      </div>
+      <div class="card-footer">
+        <p>- {{card?.userName}}</p>
+      </div>
+    </a>
   </div>
-</section>
+</div>

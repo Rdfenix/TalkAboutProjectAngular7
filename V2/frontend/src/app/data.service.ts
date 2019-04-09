@@ -11,4 +11,6 @@ export class DataService {
 
   getAllPosts = () => this.http.get(`${TALK_API}/posts`)
   getUser = (id: string) => this.http.get(`${TALK_API}/users/${id}`)
+  getPost = (id: number) => this.http.get(`${TALK_API}/posts/${id}`)
+  
 }
