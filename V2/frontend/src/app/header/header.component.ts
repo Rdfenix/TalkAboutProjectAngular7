@@ -12,4 +12,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  logout = () => {
+    sessionStorage.removeItem('email')
+    sessionStorage.removeItem('userID')
+  }
+
 }

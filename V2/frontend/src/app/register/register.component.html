@@ -2,7 +2,7 @@
   <div class="container-form">
     <div class="register">
       <h1>user registration</h1>
-      <form autocomplete="off" #form="ngForm">
+      <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
         <div class="field">
           <input type="text" placeholder="Name" name="name" #name="ngModel" [(ngModel)]="formData.name">
         </div>

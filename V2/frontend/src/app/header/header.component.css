@@ -43,3 +43,7 @@ nav>ul>a {
 nav>ul>a>li::first-letter {
   text-transform: uppercase;
 }
+
+.logout {
+  cursor: pointer;
+}

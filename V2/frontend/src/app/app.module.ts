@@ -26,7 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule,
     HttpClientModule,
     FormsModule,
-    ToastrModule
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

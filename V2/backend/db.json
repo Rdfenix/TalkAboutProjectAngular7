@@ -27,6 +27,20 @@
       "email": "sueli.barbosa@email.com",
       "password": "123456",
       "id": 4
+    },
+    {
+      "name": "rodolfo",
+      "lastName": "Abrantes",
+      "email": "rodolfo@email.com",
+      "password": "123456",
+      "id": 5
+    },
+    {
+      "name": "Rogerio",
+      "lastName": "Malta",
+      "email": "rogerio.malta@email.com",
+      "password": "123456",
+      "id": 6
     }
   ],
   "comments": [],
