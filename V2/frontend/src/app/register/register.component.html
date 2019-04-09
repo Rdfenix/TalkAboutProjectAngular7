@@ -2,18 +2,20 @@
   <div class="container-form">
     <div class="register">
       <h1>user registration</h1>
-      <form autocomplete="off">
+      <form autocomplete="off" #form="ngForm">
         <div class="field">
-          <input type="text" placeholder="Name" name="name">
+          <input type="text" placeholder="Name" name="name" #name="ngModel" [(ngModel)]="formData.name">
         </div>
         <div class="field">
-          <input type="text" placeholder="Last Name" name="lastName">
+          <input type="text" placeholder="Last Name" name="lastName" #lastName="ngModel"
+            [(ngModel)]="formData.lastName">
         </div>
         <div class="field">
-          <input type="email" placeholder="Email" name="email">
+          <input type="email" placeholder="Email" name="email" #email="ngModel" [(ngModel)]="formData.email">
         </div>
         <div class="field">
-          <input type="password" placeholder="Password" name="password">
+          <input type="password" placeholder="Password" name="password" #password="ngModel"
+            [(ngModel)]="formData.password">
         </div>
         <div class="field">
           <button type="submit">register</button>

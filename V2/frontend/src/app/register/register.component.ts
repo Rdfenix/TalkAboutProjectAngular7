@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../model/user';
+import { NgForm } from '@angular/forms';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-register',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  formData: User = {
+    name: "",
+    lastName: "",
+    email: "",
+    password: ""
+  }
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.clear()
   }
+
+  clear = () => this.formData
+
+  submitForm = (form: NgForm) => { }
 
 }

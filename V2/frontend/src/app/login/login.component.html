@@ -2,12 +2,13 @@
   <div class="container-form">
     <div class="login">
       <h1>login</h1>
-      <form autocomplete="off" class="loginFom">
+      <form autocomplete="off" #form="ngForm" class="loginFom" (submit)="onSubmit(form)">
         <div class="field">
-          <input type="email" placeholder="Email" name="email">
+          <input type="email" placeholder="Email" name="email" #email="ngModel" [(ngModel)]="formData.email">
         </div>
         <div class="field">
-          <input type="password" placeholder="Password" name="password">
+          <input type="password" placeholder="Password" name="password" #password="ngModel"
+            [(ngModel)]="formData.password">
         </div>
         <div class="field">
           <button type="submit">Login</button>
