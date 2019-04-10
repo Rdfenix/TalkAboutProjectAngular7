@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from './model/post';
 import { DataService } from 'src/app/data.service';
 import { ActivatedRoute } from '@angular/router';
-import { Post } from './model/post';
 import { User } from 'src/app/model/user';
 
 @Component({
@@ -11,9 +11,9 @@ import { User } from 'src/app/model/user';
 })
 export class PostComponent implements OnInit {
 
-  constructor(private dataService: DataService, private route: ActivatedRoute) { }
-
   post: Post;
+
+  constructor(private dataService: DataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.dataService.getPost(this.route.snapshot.params['id'])
@@ -25,5 +25,4 @@ export class PostComponent implements OnInit {
         })
       })
   }
-
 }
