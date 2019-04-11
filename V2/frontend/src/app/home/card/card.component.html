@@ -1,6 +1,6 @@
 <div class="cards">
   <div class="card" *ngFor="let card of cards" >
-    <a [routerLink]="['post', card.id]" [attr.data-index]="card.id">
+    <a [routerLink]="['post', card.id]">
       <div class="card-header">
         <h4>{{card?.title}}</h4>
       </div>
