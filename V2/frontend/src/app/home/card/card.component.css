@@ -11,6 +11,7 @@ div.cards {
 div.card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
+  width: 20%;
   max-width: 25%;
   max-height: 20%;
   display: flex;
@@ -27,6 +28,12 @@ div.card>a {
 div.card>a>div.card-header {
   background: #000;
   padding: 10px;
+  max-height: 40px;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: auto;
+  text-overflow: ellipsis;
 }
 
 div.card>a>div.card-header>h4 {
