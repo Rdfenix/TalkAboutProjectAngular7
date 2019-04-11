@@ -52,3 +52,16 @@ section>a {
   height: 100%;
   justify-content: center;
 }
+
+
+/* ======================================= CSS Modal ======================================================= */
+.cdk-global-overlay-wrapper {
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.cdk-overlay-pane {
+  max-width: 100vw !important;
+}
+
+/* ======================================= Final CSS Modal ======================================================= */

@@ -30,8 +30,8 @@ export class PostComponent implements OnInit {
 
   openModal = (): void => {
     const dialogRef = this.dialog.open(CommentComponent, {
-      width: '700px',
-      height: '500px'
+      width: '100%',
+      height: '100%',
     })
     dialogRef.afterClosed()
   }
