@@ -23,3 +23,16 @@ section>div {
 section>div>p {
   font-size: 19px;
 }
+
+section>button {
+  align-self: center;
+  width: 30%;
+  margin-top: 30px;
+  border: none;
+  background-color: #9cccef;
+  color: #000;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: bold
+}
