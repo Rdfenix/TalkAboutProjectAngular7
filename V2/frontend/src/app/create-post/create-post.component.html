@@ -3,15 +3,15 @@
     <h1>create you post here !</h1>
   </header>
   <div class="container-form">
-    <form>
+    <form #form="ngForm" autocomplete="off" (submit)="sendForm(form)">
       <div class="field">
-        <input type="text" placeholder="Title">
+        <input type="text" placeholder="Title" name="title" #title="ngModel" [(ngModel)]="postData.title">
       </div>
       <div class="field">
-        <textarea name="" id="" cols="30" rows="10" placeholder="Post"></textarea>
+        <textarea cols="30" rows="10" placeholder="Post" name="post" [(ngModel)]="postData.post"></textarea>
       </div>
       <div class="field">
-        <button>Send</button>
+        <button type="submit">Send</button>
       </div>
     </form>
   </div>
