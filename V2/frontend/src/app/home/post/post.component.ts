@@ -28,10 +28,13 @@ export class PostComponent implements OnInit {
       })
   }
 
+  teste = () => console.log("passando por aqui.")
+
   openModal = (): void => {
     const dialogRef = this.dialog.open(CommentComponent, {
       width: '100%',
       height: '100%',
+      data: { title: this.post.title, postId: this.post.id }
     })
     dialogRef.afterClosed()
   }

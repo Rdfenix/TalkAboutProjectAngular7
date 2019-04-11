@@ -33,7 +33,7 @@ export class CreatePostComponent implements OnInit {
     if (validateIsEmpty(data)) {
       this.toastr.warning("form is empty")
     } else {
-      let userID = '2'
+      let userID = '3'
       this.postData.userID = userID;
       this.postData = { ...this.postData, ...data }
 
