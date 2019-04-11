@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms'
 import { ToastrModule } from 'ngx-toastr'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BottomComponent } from './bottom/bottom.component';
@@ -12,6 +13,7 @@ import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

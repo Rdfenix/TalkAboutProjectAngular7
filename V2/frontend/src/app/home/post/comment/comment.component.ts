@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material'
 
 @Component({
   selector: 'app-comment',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommentComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialogRef: MatDialogRef<CommentComponent>) { }
+
+  onClose = (): void => this.dialogRef.close();
 
   ngOnInit() {
   }
