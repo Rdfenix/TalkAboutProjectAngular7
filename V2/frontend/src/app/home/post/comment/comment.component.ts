@@ -6,6 +6,7 @@ import { Comment } from 'src/app/model/comment';
 import { User } from 'src/app/model/user';
 import { validateIsEmpty } from 'src/app/utils/utils';
 import { NgForm } from '@angular/forms'
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-comment',
@@ -20,24 +21,20 @@ export class CommentComponent implements OnInit {
     commentary: ""
   }
 
-  constructor(public dialogRef: MatDialogRef<CommentComponent>, @Inject(MAT_DIALOG_DATA) public data: Post, private dataService: DataService) { }
+  constructor(public dialogRef: MatDialogRef<CommentComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: Post, private dataService: DataService, private toastr: ToastrService) { }
 
   onClose = (): void => this.dialogRef.close();
 
   loadComments = () => this.dataService.getAllComments(this.data.id).subscribe((response: Comment[]) => {
-
-    if (validateIsEmpty(response)) {
-      console.log("Não tem itens")
-    } else {
-
+    this.comments = [];
+    if (!validateIsEmpty(response))
       response.map(item => {
         this.dataService.getUser(item.userID).subscribe((user: User) => {
           let userName = user.name + ' ' + user.lastName
           this.comments.push({ ...item, userName: userName })
         })
       })
-
-    }
   })
 
   postComment = (form: NgForm) => {
@@ -52,11 +49,8 @@ export class CommentComponent implements OnInit {
 
       this.dataService.createComment(this.formData).subscribe(resp => {
         if (validateIsEmpty(resp)) {
-          console.log("vazio")
-        } else {
-          console.log(resp)
-          this.loadComments()
           this.resetForm();
+          this.loadComments()
         }
       })
 

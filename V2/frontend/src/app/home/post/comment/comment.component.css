@@ -64,6 +64,7 @@ div.modal-actions>form>button {
   color: #000;
   font-weight: bold;
   font-size: 16px;
+  border-radius: 5px;
 }
 
 .container-comment {
@@ -74,8 +75,4 @@ div.modal-actions>form>button {
 .container-comment>div>p {
   padding: 13px 0 13px 0;
   border-bottom: 1px #e0e0e0 solid;
-}
-
-.container-comment>div>p:last-of-type p {
-  border-bottom: none;
 }

@@ -97,6 +97,18 @@
       "postID": 4,
       "userID": "2",
       "id": 9
+    },
+    {
+      "commentary": "ho",
+      "postID": 6,
+      "userID": "2",
+      "id": 10
+    },
+    {
+      "commentary": "lets go",
+      "postID": 6,
+      "userID": "2",
+      "id": 11
     }
   ],
   "posts": [
