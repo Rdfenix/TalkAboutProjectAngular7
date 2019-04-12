@@ -1,4 +1,5 @@
 <section>
+  <a href="javascript:void(0)" (click)="onClose()"><i class="fas fa-times"></i></a>
   <div class="header-modal-comment">
     <h1>{{data?.title}}</h1>
   </div>
@@ -8,6 +9,7 @@
     </div>
   </div>
   <div class="modal-actions">
-    <button (click)="onClose()">close</button>
+    <input type="text" placeholder="teste">
+    <button>Send</button>
   </div>
 </section>
