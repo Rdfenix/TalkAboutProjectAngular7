@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { User } from 'src/app/model/user';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { CommentComponent } from './comment/comment.component';
+import { Comment } from 'src/app/model/comment';
 
 @Component({
   selector: 'app-post',
@@ -14,6 +15,7 @@ import { CommentComponent } from './comment/comment.component';
 export class PostComponent implements OnInit {
 
   post: Post;
+  commentsLength: number = 0;
 
   constructor(private dataService: DataService, private route: ActivatedRoute, public dialog: MatDialog) { }
 
@@ -26,6 +28,14 @@ export class PostComponent implements OnInit {
           this.post = { ...response, userName: name }
         })
       })
+
+    this.countComments();
+  }
+
+  countComments = () => {
+    this.dataService.getAllComments(this.route.snapshot.params['id']).subscribe((resp: Comment[]) => {
+      this.commentsLength = resp.length;
+    })
   }
 
   openModal = (): void => {
@@ -34,7 +44,7 @@ export class PostComponent implements OnInit {
       height: '100%',
       data: { title: this.post.title, id: this.post.id }
     })
-    dialogRef.afterClosed()
+    dialogRef.afterClosed().subscribe(() => this.countComments())
   }
 
 }

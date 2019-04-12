@@ -36,3 +36,21 @@ section>button {
   border-radius: 5px;
   font-weight: bold
 }
+
+.comments {
+  margin-top: 18px;
+}
+
+div.comments>p {
+  font-style: italic;
+  font-size: 15px !important;
+  font-weight: bold;
+}
+
+div.comments>p>span {
+  background: #000;
+  padding: 2px 7px;
+  border-radius: 50%;
+  color: #FFF;
+  margin-left: 3px;
+}

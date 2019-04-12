@@ -4,10 +4,13 @@
   </div>
   <header>
     <h2>{{post?.title}}</h2>
-    <h4>{{post?.userName}}</h4>
+    <h4>{{post?.userName}} </h4>
   </header>
   <div>
     <p>{{post?.post}}</p>
+  </div>
+  <div class="comments">
+    <p>Comments: <span>{{commentsLength}}</span></p>
   </div>
   <button (click)="openModal()">Commentary</button>
 </section>
