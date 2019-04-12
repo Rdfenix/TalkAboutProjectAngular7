@@ -6,8 +6,8 @@
     <h1>{{data?.title}}</h1>
   </div>
   <div class="container-comment">
-    <div *ngFor="let comment of comments">
-      <p>{{comment.commentary}}</p>
+    <div *ngFor="let comment of comments; index as i">
+      <p id="{{i}}">{{comment.commentary}}</p>
     </div>
   </div>
   <div class="modal-actions">

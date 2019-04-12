@@ -65,3 +65,17 @@ div.modal-actions>form>button {
   font-weight: bold;
   font-size: 16px;
 }
+
+.container-comment {
+  padding: 15px;
+  padding-top: 30px;
+}
+
+.container-comment>div>p {
+  padding: 13px 0 13px 0;
+  border-bottom: 1px #e0e0e0 solid;
+}
+
+.container-comment>div>p:last-of-type p {
+  border-bottom: none;
+}

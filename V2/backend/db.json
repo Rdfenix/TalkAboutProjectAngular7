@@ -73,6 +73,30 @@
       "postID": 2,
       "userID": "2",
       "id": 5
+    },
+    {
+      "commentary": "hey ",
+      "postID": 6,
+      "userID": "2",
+      "id": 6
+    },
+    {
+      "commentary": "Hello everybody",
+      "postID": 2,
+      "userID": "2",
+      "id": 7
+    },
+    {
+      "commentary": "hey dude",
+      "postID": 4,
+      "userID": "2",
+      "id": 8
+    },
+    {
+      "commentary": "are you ok ?",
+      "postID": 4,
+      "userID": "2",
+      "id": 9
     }
   ],
   "posts": [
