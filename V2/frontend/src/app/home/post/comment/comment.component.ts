@@ -56,9 +56,18 @@ export class CommentComponent implements OnInit {
         } else {
           console.log(resp)
           this.loadComments()
+          this.resetForm();
         }
       })
-      
+
+    }
+  }
+
+  resetForm = (form?: NgForm) => {
+    if (form)
+      form.resetForm();
+    this.formData = {
+      commentary: ""
     }
   }
 
