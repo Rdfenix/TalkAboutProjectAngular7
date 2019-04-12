@@ -15,7 +15,7 @@ export class DataService {
   userLogin = (email: string, password: string) => this.http.get(`${TALK_API}/users?email=${email}&password=${password}`)
   createUser = (data: object) => this.http.post(`${TALK_API}/users`, data)
   createPost = (data: object) => this.http.post(`${TALK_API}/posts`, data)
-  getAllComments = () => this.http.get(`${TALK_API}/comments`)
+  getAllComments = (id: number) => this.http.get(`${TALK_API}/comments?postID=${id}`)
   createComment = (data: object) => this.http.post(`${TALK_API}/comments`, data)
 
 }

@@ -43,7 +43,14 @@
       "id": 6
     }
   ],
-  "comments": [],
+  "comments": [
+    {
+      "commentary": "hello father",
+      "postID": 6,
+      "userID": "2",
+      "id": 1
+    }
+  ],
   "posts": [
     {
       "title": "Verificando o que aparece na tela",

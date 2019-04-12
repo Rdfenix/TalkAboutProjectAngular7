@@ -24,7 +24,7 @@ export class CommentComponent implements OnInit {
 
   onClose = (): void => this.dialogRef.close();
 
-  loadComments = () => this.dataService.getAllComments().subscribe((response: Comment[]) => {
+  loadComments = () => this.dataService.getAllComments(this.data.id).subscribe((response: Comment[]) => {
 
     if (validateIsEmpty(response)) {
       console.log("Não tem itens")
@@ -44,19 +44,22 @@ export class CommentComponent implements OnInit {
 
     let data = { ...form.value }
 
-    this.formData.postID = this.data.id;
+    if (!validateIsEmpty(data)) {
 
-    console.log(this.formData)
+      this.formData.postID = this.data.id;
+      this.formData.userID = "2"
+      this.formData = { ...this.formData, ...data }
 
-    // if (!validateIsEmpty(data)) {
-    //   this.dataService.createComment(data).subscribe(resp => {
-    //     if (validateIsEmpty(resp)) {
-    //       console.log("vazio")
-    //     } else {
-    //       this.loadComments()
-    //     }
-    //   })
-    // }
+      this.dataService.createComment(this.formData).subscribe(resp => {
+        if (validateIsEmpty(resp)) {
+          console.log("vazio")
+        } else {
+          console.log(resp)
+          this.loadComments()
+        }
+      })
+      
+    }
   }
 
   ngOnInit() {
