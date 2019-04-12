@@ -11,8 +11,9 @@
     </div>
   </div>
   <div class="modal-actions">
-    <form action="">
-      <input type="text" placeholder="teste">
+    <form #form="ngForm" autocomplete="off" (submit)="postComment(form)">
+      <input type="text" placeholder="Send your comment" name="commentary" #commentary="ngModel"
+        [(ngModel)]="formData.commentary">
       <button>Send</button>
     </form>
   </div>

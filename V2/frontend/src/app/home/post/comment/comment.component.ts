@@ -16,6 +16,10 @@ export class CommentComponent implements OnInit {
 
   comments: Comment[] = []
 
+  formData: Comment = {
+    commentary: ""
+  }
+
   constructor(public dialogRef: MatDialogRef<CommentComponent>, @Inject(MAT_DIALOG_DATA) public data: Post, private dataService: DataService) { }
 
   onClose = (): void => this.dialogRef.close();
@@ -40,19 +44,24 @@ export class CommentComponent implements OnInit {
 
     let data = { ...form.value }
 
-    if (!validateIsEmpty(data)) {
-      this.dataService.createComment(data).subscribe(resp => {
-        if (validateIsEmpty(resp)) {
-          console.log("vazio")
-        } else {
-          this.loadComments()
-        }
-      })
-    }
+    this.formData.postID = this.data.id;
+
+    console.log(this.formData)
+
+    // if (!validateIsEmpty(data)) {
+    //   this.dataService.createComment(data).subscribe(resp => {
+    //     if (validateIsEmpty(resp)) {
+    //       console.log("vazio")
+    //     } else {
+    //       this.loadComments()
+    //     }
+    //   })
+    // }
   }
 
   ngOnInit() {
-    this.loadComments()
+    this.formData;
+    this.loadComments();
   }
 
 }

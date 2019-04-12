@@ -34,7 +34,7 @@ export class PostComponent implements OnInit {
     const dialogRef = this.dialog.open(CommentComponent, {
       width: '100%',
       height: '100%',
-      data: { title: this.post.title, postId: this.post.id }
+      data: { title: this.post.title, id: this.post.id }
     })
     dialogRef.afterClosed()
   }

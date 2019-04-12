@@ -36,3 +36,32 @@ section>div.modal-actions>form {
   justify-content: center;
   border-top: 1px #d0d0d0 solid;
 }
+
+div.modal-actions>form {
+  flex: 1;
+  text-align: center;
+}
+
+div.modal-actions>form>input {
+  margin-right: 36px;
+  width: 50%;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 3px;
+  border: 1px #d6d6d6 solid;
+}
+
+div.modal-actions>form>input::placeholder {
+  font-style: italic;
+}
+
+div.modal-actions>form>button {
+  width: 18%;
+  padding: 9px;
+  border: none;
+  background-color: #9cccef;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+}
