@@ -3,6 +3,19 @@ section {
   height: 100%;
 }
 
+section>div.close-modal {
+  align-self: flex-end;
+}
+
+section>div.close-modal>a {
+  color: #000;
+  text-decoration: none;
+}
+
+section>div.header-modal-comment {
+  text-align: center;
+}
+
 .modal-actions {
   background: #f3f3f3;
   padding: 15px;
