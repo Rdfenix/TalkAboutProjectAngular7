@@ -29,12 +29,10 @@ export class CommentComponent implements OnInit {
   loadComments = () => this.dataService.getAllComments(this.data.id).subscribe((response: Comment[]) => {
     this.comments = [];
     if (!validateIsEmpty(response))
-      response.map(item => {
-        this.dataService.getUser(item.userID).subscribe((user: User) => {
-          let userName = user.name + ' ' + user.lastName
-          this.comments.push({ ...item, userName: userName })
-        })
-      })
+      response.map(item => this.dataService.getUser(item.userID).subscribe((user: User) => {
+        let userName = user.name + ' ' + user.lastName
+        this.comments.push({ ...item, userName: userName })
+      }))
   })
 
   postComment = (form: NgForm) => {
