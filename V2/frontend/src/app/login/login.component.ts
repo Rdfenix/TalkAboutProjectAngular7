@@ -3,6 +3,8 @@ import { User } from '../model/user';
 import { NgForm } from '@angular/forms'
 import { DataService } from '../data.service';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +18,7 @@ export class LoginComponent implements OnInit {
     password: ''
   }
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, private _auth: AuthService, private route: Router) { }
 
   ngOnInit() {
     this.formData
@@ -30,6 +32,9 @@ export class LoginComponent implements OnInit {
       } else {
         sessionStorage.setItem('email', response[0].email)
         sessionStorage.setItem('userID', response[0].id)
+        sessionStorage.setItem('resgitred', 'true')
+        this._auth.callNextState(Boolean(sessionStorage.getItem('resgitred')))
+        this.route.navigate(['/home'])
       }
     })
   }

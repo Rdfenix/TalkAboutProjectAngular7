@@ -5,19 +5,19 @@
     </a>
     <nav>
       <ul>
-        <a routerLink="/login">
+        <a routerLink="/login" *ngIf="!userLogged">
           <li>login</li>
         </a>
-        <a routerLink="/register">
+        <a routerLink="/register" *ngIf="!userLogged">
           <li>register</li>
         </a>
-        <a routerLink="/home">
+        <a routerLink="/home" *ngIf="userLogged">
           <li>posts</li>
         </a>
-        <a routerLink="/create-post">
+        <a routerLink="/create-post" *ngIf="userLogged">
           <li>create post</li>
         </a>
-        <a (click)="logout()">
+        <a (click)="logout()" *ngIf="userLogged">
           <li class="logout">logout</li>
         </a>
       </ul>
