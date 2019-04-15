@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
     password: ''
   }
 
-  constructor(private dataService: DataService, private _auth: AuthService, private route: Router) { }
+  constructor(private dataService: DataService, private _auth: AuthService, private route: Router, private toastr: ToastrService) { }
 
   ngOnInit() {
     this.formData
@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
     let data = { ...form.value }
     this.dataService.userLogin(data.email, data.password).subscribe((response: User) => {
       if (response == "") {
-        console.log("not possible")
+        this.toastr.warning('User not found')
       } else {
         sessionStorage.setItem('email', response[0].email)
         sessionStorage.setItem('userID', response[0].id)
