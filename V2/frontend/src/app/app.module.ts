@@ -14,6 +14,8 @@ import { MainComponent } from './main/main.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material/material.module';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,7 @@ import { MaterialModule } from './material/material.module';
     ToastrModule.forRoot(),
     MaterialModule
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
