@@ -48,7 +48,7 @@ export class CommentComponent implements OnInit {
       this.formData = { ...this.formData, ...data }
 
       this.dataService.createComment(this.formData).subscribe(resp => {
-        if (validateIsEmpty(resp)) {
+        if (!validateIsEmpty(resp)) {
           this.resetForm();
           this.loadComments()
         }

@@ -14,7 +14,7 @@
     <form #form="ngForm" autocomplete="off" (submit)="postComment(form)">
       <input type="text" placeholder="Send your comment" name="commentary" #commentary="ngModel"
         [(ngModel)]="formData.commentary">
-      <button>Send</button>
+      <button type="submit">Send</button>
     </form>
   </div>
 </section>
