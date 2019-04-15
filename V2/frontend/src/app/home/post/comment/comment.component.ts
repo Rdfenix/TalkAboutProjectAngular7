@@ -44,7 +44,7 @@ export class CommentComponent implements OnInit {
     if (!validateIsEmpty(data)) {
 
       this.formData.postID = this.data.id;
-      this.formData.userID = "2"
+      this.formData.userID = sessionStorage.getItem('userID')
       this.formData = { ...this.formData, ...data }
 
       this.dataService.createComment(this.formData).subscribe(resp => {
