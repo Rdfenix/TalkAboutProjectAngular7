@@ -1,0 +1,45 @@
+.header {
+  height: auto;
+  background-color: #1f1f1f;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+
+  .container {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .logo {
+      text-decoration: none;
+      color: #FFF;
+      align-self: center;
+
+      h1 {
+        font-style: italic;
+        font-size: 2em;
+      }
+    }
+
+    .nav {
+      ul {
+        list-style: none;
+        display: flex;
+
+        .nav-item {
+          text-decoration: none;
+          color: #FFF;
+          font-size: 1em;
+          padding: 10px;
+
+          .logout {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+  }
+}
