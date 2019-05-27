@@ -1,9 +1,10 @@
 .header {
   height: auto;
   background-color: #1f1f1f;
-  padding: 12px;
+  padding: 14px;
   display: flex;
   align-items: center;
+  margin-bottom: 0;
 
   .container-header {
     display: flex;
@@ -27,6 +28,7 @@
       ul {
         list-style: none;
         display: flex;
+        margin-bottom: 0;
 
         .nav-item {
           text-decoration: none;

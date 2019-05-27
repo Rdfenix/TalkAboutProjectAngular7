@@ -1,0 +1,10 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  h1 {
+    align-self: center;
+    justify-content: center;
+  }
+}
