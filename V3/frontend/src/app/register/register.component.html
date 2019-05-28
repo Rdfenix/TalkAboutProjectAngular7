@@ -1,3 +1,19 @@
-<p>
-  register works!
-</p>
+<div class="form-talk-about">
+  <div class="post-form">
+    <h2 class="title-form">Register</h2>
+    <br>
+    <form>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Name">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Last name">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="password" [type]="hide ? 'password' : 'text'">
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </mat-form-field>
+      <button class="btn btn-primary">Register</button>
+    </form>
+  </div>
+</div>

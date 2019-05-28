@@ -1,13 +1,16 @@
 <div class="form-talk-about">
   <div class="post-form">
     <h2 class="title-form">Login</h2>
-    <mat-form-field>
-      <input type="email" matInput placeholder="your email">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
-      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-    </mat-form-field>
+    <br>
+    <form>
+      <mat-form-field>
+        <input type="email" matInput placeholder="your email">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </mat-form-field>
+    </form>
     <button class="btn btn-primary">Login</button>
     <a routerLink="/register" class="register-link">Register</a>
   </div>
