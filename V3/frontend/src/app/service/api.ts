@@ -1,0 +1,1 @@
+export const API_TALK = 'http://localhost:3000'
