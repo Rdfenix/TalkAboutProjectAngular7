@@ -22,21 +22,17 @@ export class PostComponent implements OnInit {
     this.countComments()
   }
 
-  getComment = () => {
-    this.dataService.getPost(this.route.snapshot.params['id'])
-      .subscribe((response: Post) => {
-        this.post = response
-        this.dataService.getUser(response.userID).subscribe((userData: User) => {
-          let name = userData.name + ' ' + userData.lastName
-          this.post = { ...response, userName: name }
-        })
+  getComment = () => this.dataService.getPost(this.route.snapshot.params['id'])
+    .subscribe((response: Post) => {
+      this.post = response
+      this.dataService.getUser(response.userID).subscribe((userData: User) => {
+        let name = userData.name + ' ' + userData.lastName
+        this.post = { ...response, userName: name }
       })
-  }
-
-  countComments = () => {
-    this.dataService.getAllComments(this.route.snapshot.params['id']).subscribe((resp: Comment[]) => {
-      this.commentsLength = resp.length;
     })
-  }
+
+  countComments = () => this.dataService.getAllComments(this.route.snapshot.params['id']).subscribe((resp: Comment[]) => {
+    this.commentsLength = resp.length;
+  })
 
 }
