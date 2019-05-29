@@ -3,6 +3,7 @@ import { DataService } from 'src/app/service/data.service';
 import { ActivatedRoute } from '@angular/router';
 import { Post } from 'src/app/model/post';
 import { User } from 'src/app/model/user';
+import { Comment } from 'src/app/model/comment'
 
 @Component({
   selector: 'app-post',
@@ -18,6 +19,7 @@ export class PostComponent implements OnInit {
 
   ngOnInit() {
     this.getComment()
+    this.countComments()
   }
 
   getComment = () => {
@@ -29,6 +31,12 @@ export class PostComponent implements OnInit {
           this.post = { ...response, userName: name }
         })
       })
+  }
+
+  countComments = () => {
+    this.dataService.getAllComments(this.route.snapshot.params['id']).subscribe((resp: Comment[]) => {
+      this.commentsLength = resp.length;
+    })
   }
 
 }
