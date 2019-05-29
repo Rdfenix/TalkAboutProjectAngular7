@@ -14,12 +14,14 @@ export class PostComponent implements OnInit {
 
   post: Post;
   commentsLength: number = 0;
+  id: number;
 
   constructor(private dataService: DataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.getComment()
     this.countComments()
+    this.id = this.route.snapshot.params['id']
   }
 
   getComment = () => this.dataService.getPost(this.route.snapshot.params['id'])
