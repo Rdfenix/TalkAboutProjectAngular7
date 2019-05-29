@@ -1,3 +1,15 @@
-<p>
-  post works!
-</p>
+<div class="post">
+  <header>
+    <h3>{{post?.title}}</h3>
+    <h5>{{post?.userName}}</h5>
+  </header>
+  <div class="comment-container">
+    <div>
+      <p>{{post?.post}}</p>
+    </div>
+    <div>
+      <p>Comments: <span>{{commentsLength}}</span></p>
+    </div>
+  </div>
+  <button class="btn btn-primary">Commentary</button>
+</div>

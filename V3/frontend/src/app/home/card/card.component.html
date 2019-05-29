@@ -1,6 +1,6 @@
 <div class="cards" *ngIf="cards">
   <mat-card class="card" *ngFor="let card of cards">
-    <a>
+    <a [routerLink]="['post', card.id]" class="card-route">
       <mat-card-header class="card-header-post">
         <mat-card-title class="card-header-title">{{card?.title}}</mat-card-title>
       </mat-card-header>

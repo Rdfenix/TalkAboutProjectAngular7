@@ -1,5 +1,6 @@
 .cards {
 
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
 
@@ -9,46 +10,52 @@
     width: 300px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
-    .card-header-post {
-      background: #000;
-      padding: 10px 0 0 0;
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
+    .card-route {
 
-      .card-header-title {
-        color: #FFF;
-        max-height: 40px;
-        max-width: 230px;
-        white-space: nowrap;
-        overflow: hidden;
-        width: auto;
-        text-overflow: ellipsis;
+      text-decoration: none;
+
+      .card-header-post {
+        background: #000;
+        padding: 10px 0 0 0;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+  
+        .card-header-title {
+          color: #FFF;
+          max-height: 40px;
+          max-width: 230px;
+          white-space: nowrap;
+          overflow: hidden;
+          width: auto;
+          text-overflow: ellipsis;
+        }
+      }
+  
+      .card-content {
+        height: 80px;
+        padding: 15px 0 0px 0;
+  
+        .post-card {
+          color: #000;
+          white-space: normal;
+          overflow: hidden;
+          max-height: 60px;
+        }
+      }
+  
+      .card-footer {
+        background: #f3f3f3;
+  
+        p {
+          font-style: italic;
+          margin-bottom: 0;
+          color: #000;
+        }
       }
 
-      h4 {
-        color: #FFF;
-      }
     }
 
-    .card-content {
-      height: 80px;
-      padding: 5px 0 3px 0;
 
-      .post-card {
-        white-space: normal;
-        overflow: hidden;
-        max-height: 60px;
-      }
-    }
-
-    .card-footer {
-      background: #f3f3f3;
-
-      p {
-        font-style: italic;
-        margin-bottom: 0;
-      }
-    }
   }
 
 }

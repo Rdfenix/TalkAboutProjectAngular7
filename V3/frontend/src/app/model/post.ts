@@ -5,4 +5,5 @@ export interface Post {
     id?: number;
     name?: string;
     lastName?: string;
+    userName?: string;
 }

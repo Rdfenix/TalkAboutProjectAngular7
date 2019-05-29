@@ -1,0 +1,13 @@
+.post {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 25px;
+
+  .comment-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+  }
+}
