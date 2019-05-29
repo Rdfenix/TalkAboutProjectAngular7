@@ -1,15 +1,17 @@
-<mat-card class="card">
-  <a>
-    <mat-card-header class="card-header-post">
-      <mat-card-title style="color: #FFF;">teste</mat-card-title>
-    </mat-card-header>
-    <mat-card-content class="card-content">
-      <div class="container">
-        <p>post</p>
+<div class="cards" *ngIf="cards">
+  <mat-card class="card" *ngFor="let card of cards">
+    <a>
+      <mat-card-header class="card-header-post">
+        <mat-card-title class="card-header-title">{{card?.title}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="card-content">
+        <div class="container">
+          <p class="post-card">{{card?.post}}</p>
+        </div>
+      </mat-card-content>
+      <div class="card-footer" class="card-footer">
+        <p>- {{card?.userName}}</p>
       </div>
-    </mat-card-content>
-    <div class="card-footer" class="card-footer">
-      <p style="margin-bottom: 0;">- username</p>
-    </div>
-  </a>
-</mat-card>
+    </a>
+  </mat-card>
+</div>
