@@ -5,13 +5,14 @@
   <div style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;">
     <div class="commentary">
       <div class="row commentary-row" *ngFor="let comment of comments">
-        <p style="margin-bottom: 0.5rem;">{{comment?.commentary}}</p>
+        <p id="{{comment.id}}" style="margin-bottom: 0.5rem;">{{comment?.commentary}}</p>
       </div>
     </div>
     <div class="comment-field">
       <div class="row">
-        <form class="comment-form" autocomplete="off">
-          <input matInput type="text" class="comment-input" placeholder="Commentary">
+        <form #form="ngForm" class="comment-form" autocomplete="off" (submit)="sendComment(form)">
+          <input matInput type="text" class="comment-input" placeholder="Commentary" name="commentary"
+            #commentary="ngModel" [(ngModel)]="formData.commentary">
           <button class="btn btn-primary send-button-comment">Send</button>
         </form>
       </div>
