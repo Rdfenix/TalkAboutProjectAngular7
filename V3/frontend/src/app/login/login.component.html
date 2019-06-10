@@ -4,10 +4,10 @@
     <br>
     <form>
       <mat-form-field>
-        <input type="email" matInput placeholder="your email">
+        <input type="email" matInput placeholder="your email" autocomplete="off">
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+        <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" autocomplete="off">
         <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </mat-form-field>
     </form>
