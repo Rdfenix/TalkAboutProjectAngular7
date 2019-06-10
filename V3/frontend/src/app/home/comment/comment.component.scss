@@ -1,35 +1,61 @@
 .comment {
-  .container {
-    .commentary {
-      .commentary-row {
-        padding: 5px 0 5px 0;
-        border-bottom: 1px #e0e0e0 solid;
-      }
-    }
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  flex-direction: column;
+  padding: 10px;
 
-    .comment-field {
-      flex: 1;
+  .commentary {
+    flex: 10;
+    padding: 8px 0 15px 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    .commentary-row {
+      padding: 5px 0 5px 0;
+      border-bottom: 1px #e0e0e0 solid;
+      margin-left: 0;
+      width: auto;
+      margin-right: 0;
+    }
+  }
+
+  .comment-field {
+    flex: 1;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+
+    .row {
+      justify-content: center;
       width: 100%;
-      text-align: center;
 
-      .comment-input {
-        width: 70%;
-        margin-right: 15px;
-        padding: 5px;
-        font-weight: bold;
-        font-size: 18px;
-        border-radius: 3px;
-        border: 1px #d6d6d6 solid;
-      }
+      .comment-form {
+        width: 100%;
+        position: fixed;
+        bottom: 10%;
 
-      .comment-input::placeholder {
-        font-style: italic;
-      }
+        .comment-input {
+          width: 70%;
+          margin-right: 15px;
+          padding: 5px;
+          font-weight: bold;
+          font-size: 18px;
+          border-radius: 3px;
+          border: 1px #d6d6d6 solid;
+        }
 
-      .send-button-comment {
-        width: 100px;
-        padding: 5px;
+        .comment-input::placeholder {
+          font-style: italic;
+        }
+
+        .send-button-comment {
+          width: 100px;
+          padding: 5px;
+        }
       }
     }
+
   }
 }
