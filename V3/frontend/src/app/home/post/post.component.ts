@@ -28,7 +28,6 @@ export class PostComponent implements OnInit {
     .subscribe((response: Post) => {
       this.post = response
       this.dataService.getUser(response.userID).subscribe((userData: User) => {
-        sessionStorage.setItem('userID', String(userData.id))
         let name = userData.name + ' ' + userData.lastName
         this.post = { ...response, userName: name }
       })
