@@ -1,7 +1,35 @@
 .comment {
   .container {
-    .send-button-comment {
-      width: 100px;
+    .commentary {
+      .commentary-row {
+        padding: 5px 0 5px 0;
+        border-bottom: 1px #e0e0e0 solid;
+      }
+    }
+
+    .comment-field {
+      flex: 1;
+      width: 100%;
+      text-align: center;
+
+      .comment-input {
+        width: 70%;
+        margin-right: 15px;
+        padding: 5px;
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 3px;
+        border: 1px #d6d6d6 solid;
+      }
+
+      .comment-input::placeholder {
+        font-style: italic;
+      }
+
+      .send-button-comment {
+        width: 100px;
+        padding: 5px;
+      }
     }
   }
 }
