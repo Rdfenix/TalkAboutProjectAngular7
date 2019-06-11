@@ -12,7 +12,10 @@
           name="password" #password="ngModel" [(ngModel)]="formData.password">
         <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </mat-form-field>
-      <button class="btn btn-primary" type="submit">Login</button>
+      <button class="btn btn-primary" type="submit" [disabled]="showLoading">
+        <span *ngIf="!showLoading">Login</span>
+        <span *ngIf="showLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      </button>
     </form>
 
     <a routerLink="/register" class="register-link">Register</a>

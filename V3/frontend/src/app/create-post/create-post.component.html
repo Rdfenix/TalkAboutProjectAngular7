@@ -2,14 +2,17 @@
   <div class="post-form">
     <h2 class="title-form">create you post here !</h2>
     <br>
-    <form>
+    <form #form="ngForm" (submit)="sendForm(form)">
       <mat-form-field>
-        <input matInput placeholder="Title" type="text">
+        <input matInput placeholder="Title" type="text" name="title" #title="ngModel" [(ngModel)]="postData.title">
       </mat-form-field>
       <mat-form-field>
-        <textarea matInput placeholder="Your post"></textarea>
+        <textarea matInput placeholder="Your post" name="post" [(ngModel)]="postData.post"></textarea>
       </mat-form-field>
+      <button type="submit" class="btn btn-success" [disabled]="showLoading">
+        <span *ngIf="!showLoading">Send</span>
+        <span *ngIf="showLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      </button>
     </form>
-    <button class="btn btn-success">Send</button>
   </div>
 </div>

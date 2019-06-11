@@ -15,6 +15,7 @@ import { AuthService } from '../service/auth.service';
 export class LoginComponent implements OnInit {
 
   hide: boolean = true;
+  showLoading: boolean = false;
   formData: User = {
     email: '',
     password: ''
@@ -25,6 +26,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit = (form: NgForm) => {
     let data = { ...form.value }
+    this.showLoading = true
     this.dataService.userLogin(data.email, data.password).subscribe((response: User) => {
       if (validateIsEmpty(response)) {
         this.toastr.warning('User not found')
@@ -33,6 +35,7 @@ export class LoginComponent implements OnInit {
         sessionStorage.setItem('userID', response[0].id)
         sessionStorage.setItem('resgitred', 'true')
         this._auth.callNextState(Boolean(sessionStorage.getItem('resgitred')))
+        this.showLoading = false
         this.route.navigate(['/home'])
       }
     })

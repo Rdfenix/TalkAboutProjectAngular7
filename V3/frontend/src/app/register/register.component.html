@@ -2,19 +2,27 @@
   <div class="post-form">
     <h2 class="title-form">Register</h2>
     <br>
-    <form>
+    <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
       <mat-form-field>
-        <input matInput type="text" placeholder="Name">
+        <input matInput type="text" placeholder="Name" name="name" #name="ngModel" [(ngModel)]="formData.name">
       </mat-form-field>
       <mat-form-field>
-        <input matInput type="text" placeholder="Last name" autocomplete="off">
+        <input matInput type="text" placeholder="Last name" autocomplete="off" name="lastName" #lastName="ngModel"
+          [(ngModel)]="formData.lastName">
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="password" [type]="hide ? 'password' : 'text'">
+        <input matInput type="email" placeholder="email" name="email" #email="ngModel" [(ngModel)]="formData.email">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="password" [type]="hide ? 'password' : 'text'" name="password" #password="ngModel"
+          [(ngModel)]="formData.password">
         <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}
         </mat-icon>
       </mat-form-field>
-      <button class="btn btn-primary">Register</button>
+      <button class="btn btn-primary" [disabled]="showLoading">
+        <span *ngIf="!showLoading">Register</span>
+        <span *ngIf="showLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      </button>
       <a routerLink="/login" class="login-link">Login</a>
     </form>
   </div>

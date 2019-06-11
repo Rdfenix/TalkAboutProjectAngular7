@@ -13,7 +13,7 @@ export class AuthGuard implements CanActivate {
   }
 
   validateAccess = () => {
-    let data = sessionStorage.getItem('user')
+    let data = sessionStorage.getItem('email')
     if (data != undefined || data != null)
       return true;
     else
