@@ -37,4 +37,6 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  deltePost = (id: number) => this.service.deletePost(id)
+
 }

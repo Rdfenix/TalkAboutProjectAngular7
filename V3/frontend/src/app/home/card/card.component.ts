@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Card } from 'src/app/model/card';
 
 @Component({
@@ -9,8 +9,11 @@ import { Card } from 'src/app/model/card';
 export class CardComponent implements OnInit {
 
   @Input() cards: Card[] = []
+  @Output() delete = new EventEmitter<number>()
 
   constructor() { }
+
+  deltePost = (id: number) => this.delete.emit(id)
 
   ngOnInit() {
   }
