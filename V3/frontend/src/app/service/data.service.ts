@@ -17,5 +17,6 @@ export class DataService {
   createPost = (data: object) => this.http.post(`${API_TALK}/posts`, data)
   getAllComments = (id: number) => this.http.get(`${API_TALK}/comments?postID=${id}`)
   createComment = (data: object) => this.http.post(`${API_TALK}/comments`, data)
+  deletePost = (id: number) => this.http.delete(`${API_TALK}/posts/${id}`)
 
 }

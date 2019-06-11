@@ -13,7 +13,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './service/auth.service';
 import { AuthGuard } from './service/auth.guard';
-
 @NgModule({
   declarations: [
     AppComponent,

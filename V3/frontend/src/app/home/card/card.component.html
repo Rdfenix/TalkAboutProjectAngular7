@@ -11,6 +11,10 @@
       </mat-card-content>
       <div class="card-footer" class="card-footer">
         <p>- {{card?.userName}}</p>
+        <div class="footer-card-action">
+          <a (click)="remove(card.id)"  class="delete" alt="Delete"><i class="fas fa-trash-alt"></i></a>
+        </div>
+
       </div>
     </a>
   </mat-card>
