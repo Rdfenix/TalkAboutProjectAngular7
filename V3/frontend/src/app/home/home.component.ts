@@ -18,13 +18,23 @@ export class HomeComponent implements OnInit {
   }
 
   getPosts = () => {
-    this.service.getAllPosts().subscribe((response: Post[]) => response.map(item => {
-      this.service.getUser(item.userID).subscribe((data: Post) => {
-        let userName = data.name + ' ' + data.lastName
-        let card = { ...item, userName }
-        this.posts.push(card)
+    this.service.getAllPosts().subscribe((response: Post[]) => {
+      response.sort((a, b) => (a.id < b.id ? 1 : -1)) //realiza uma ordenação no array onde é descendente
+      response.map(item => {
+        this.service.getUser(item.userID).subscribe((data: Post) => {
+
+          if (sessionStorage.getItem('userID') === String(item.userID)) {
+            item.owner = true
+          } else {
+            item.owner = false
+          }
+
+          let userName = data.name + ' ' + data.lastName
+          let card = { ...item, userName }
+          this.posts.push(card)
+        })
       })
-    }))
+    })
   }
 
 }

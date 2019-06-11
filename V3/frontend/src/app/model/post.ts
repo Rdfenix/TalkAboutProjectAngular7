@@ -6,4 +6,5 @@ export interface Post {
     name?: string;
     lastName?: string;
     userName?: string;
+    owner?: boolean;
 }
