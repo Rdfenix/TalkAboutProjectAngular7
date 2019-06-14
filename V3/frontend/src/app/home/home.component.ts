@@ -44,7 +44,6 @@ export class HomeComponent implements OnInit {
 
   deltePost = (id: number) => {
     let dataCard = this.posts.filter(item => item.id === id)
-    //console.log(dataCard[0])
 
     if (dataCard[0].owner) {
       this.service.getAllComments(id).subscribe((response: Comment[]) => {
