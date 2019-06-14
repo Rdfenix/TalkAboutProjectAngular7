@@ -9,7 +9,7 @@ import { Card } from 'src/app/model/card';
 export class CardComponent implements OnInit {
 
   @Input() cards: Card[] = []
-  @Output() delete = new EventEmitter<number>()
+  @Output() delete = new EventEmitter<any>()
 
   constructor() { }
 
