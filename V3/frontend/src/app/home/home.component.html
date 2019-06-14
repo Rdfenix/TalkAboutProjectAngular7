@@ -1,3 +1,6 @@
 <div class="home">
-  <app-card [cards]="posts" (delete)="deltePost($event)"></app-card>
+  <app-card *ngIf="showCards" [cards]="posts" (delete)="deltePost($event)"></app-card>
+  <section *ngIf="!showCards">
+    <h1>Is empty</h1>
+  </section>
 </div>

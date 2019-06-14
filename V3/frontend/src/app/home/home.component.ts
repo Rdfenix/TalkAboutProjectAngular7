@@ -13,6 +13,7 @@ import { validateIsEmpty } from '../utils/utils';
 export class HomeComponent implements OnInit {
 
   posts: Post[] = []
+  showCards: boolean = false
 
   constructor(private service: DataService, private toastr: ToastrService) { }
 
@@ -20,10 +21,10 @@ export class HomeComponent implements OnInit {
     this.getPosts()
   }
 
-  getPosts = () => {
-
-    this.service.getAllPosts().subscribe((response: Post[]) => {
-      this.posts = []
+  getPosts = () => this.service.getAllPosts().subscribe((response: Post[]) => {
+    this.posts = []
+    if (!validateIsEmpty(response)) {
+      this.showCards = true
       response.sort((a, b) => (a.id < b.id ? 1 : -1)) //realiza uma ordenação no array onde é descendente
       response.map(item => {
         this.service.getUser(item.userID).subscribe((data: Post) => {
@@ -39,8 +40,11 @@ export class HomeComponent implements OnInit {
           this.posts.push(card)
         })
       })
-    })
-  }
+    } else {
+      this.showCards = false
+    }
+
+  })
 
   deltePost = (id: number) => {
     let dataCard = this.posts.filter(item => item.id === id)
@@ -59,12 +63,10 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  deleteItem = (id: number) => {
-    this.service.deletePost(id).subscribe(response => {
-      this.posts = []
-      this.getPosts()
-      this.toastr.success('Post deleted')
-    })
-  }
+  deleteItem = (id: number) => this.service.deletePost(id).subscribe(response => {
+    this.posts = []
+    this.getPosts()
+    this.toastr.success('Post deleted')
+  })
 
 }
