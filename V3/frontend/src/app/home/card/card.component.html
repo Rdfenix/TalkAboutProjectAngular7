@@ -1,6 +1,6 @@
 <div class="cards" *ngIf="cards">
   <mat-card class="card" *ngFor="let card of cards">
-    <a [routerLink]="['post', card.id]" class="card-route">
+    <div class="card-route">
       <mat-card-header class="card-header-post">
         <mat-card-title class="card-header-title">{{card?.title}}</mat-card-title>
       </mat-card-header>
@@ -12,9 +12,10 @@
       <div class="card-footer" class="card-footer">
         <p>- {{card?.userName}}</p>
         <div class="footer-card-action">
+          <a [routerLink]="['post', card.id]" class="delete"><i class="fas fa-comments"></i></a>
           <a (click)="deltePost(card.id)" class="delete" alt="Delete"><i class="fas fa-trash-alt"></i></a>
         </div>
       </div>
-    </a>
+    </div>
   </mat-card>
 </div>
