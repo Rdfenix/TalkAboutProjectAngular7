@@ -46,13 +46,15 @@ export class HomeComponent implements OnInit {
 
   })
 
-  deltePost = (id: number) => {
+  deltePost = async (id: number) => {
     let dataCard = this.posts.filter(item => item.id === id)
 
     if (dataCard[0].owner) {
-      this.service.getAllComments(id).subscribe((response: Comment[]) => {
+      await this.service.getAllComments(id).subscribe((response: Comment[]) => {
         if (!validateIsEmpty(response)) {
-          response.map(data => this.service.deleteComment(data.id))
+          response.map(data => {
+            this.service.deleteComment(data.id)
+          })
           this.deleteItem(id)
         } else {
           this.deleteItem(id)
