@@ -1,32 +1,18 @@
 {
   "users": [
     {
-      "name": "Rudnei",
-      "lastName": "Oliveira",
-      "email": "rudnei.oliveira@gmail.com",
+      "name": "Admin",
+      "lastName": "adm",
+      "email": "admin@teste.com",
       "password": "123456",
       "id": 1
     },
     {
-      "name": "Marcos",
-      "lastName": "Oliveira",
-      "email": "marcos.oliveira@email.com",
+      "name": "user",
+      "lastName": "teste",
+      "email": "user.teste@teste.com",
       "password": "123456",
       "id": 2
-    },
-    {
-      "name": "Celso",
-      "lastName": "Oliveira",
-      "email": "celso.oliveira@email.com",
-      "password": "123456",
-      "id": 3
-    },
-    {
-      "name": "Sueli",
-      "lastName": "Barbosa",
-      "email": "sueli.barbosa@email.com",
-      "password": "123456",
-      "id": 4
     }
   ],
   "comments": [],
